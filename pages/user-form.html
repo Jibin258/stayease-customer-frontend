@@ -10,21 +10,26 @@
 </head>
 
 <body>
+    <!-- Header section -->
     <header id="header">
         <div class="imgContainer">
             <img src="/assets/img/stayEase-Logo.webp" alt="Company_Logo" />
         </div>
     </header>
 
+    <!-- Main section -->
     <main class="form-container">
+        <!-- Form to submit user details -->
         <form class="user-form" onsubmit="return validateForm()">
             <div class="fieldset">
+                <!-- Firstname -->
                 <div class="form-group item1">
                     <label for="fname">First Name:</label>
                     <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
                     <p id="fname-error" class="error"></p>
                 </div>
 
+                <!-- Lastname -->
                 <div class="form-group item2">
                     <label for="lname">Last Name:</label>
                     <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
@@ -33,12 +38,14 @@
             </div>
 
             <div class="fieldset">
+                <!-- Phone -->
                 <div class="form-group item1">
                     <label for="phone">Phone:</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                     <p id="phone-error" class="error"></p>
                 </div>
 
+                <!-- Email -->
                 <div class="form-group item2">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -46,6 +53,7 @@
                 </div>
             </div>
 
+            <!-- Address -->
             <div class="form-group">
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" placeholder="Enter your address" required>
@@ -53,12 +61,14 @@
             </div>
 
             <div class="fieldset">
+                <!-- DOB -->
                 <div class="form-group item1">
                     <label for="dob">Date of Birth:</label>
                     <input type="date" id="dob" name="dob" required>
                     <p id="dob-error" class="error"></p>
                 </div>
 
+                <!-- Gender -->
                 <div class="form-group item2">
                     <label for="gender">Gender:</label>
                     <select id="gender" name="gender" required>
@@ -71,6 +81,7 @@
             </div>
 
             <div class="fieldset">
+                <!-- Identity Type -->
                 <div class="form-group item3">
                     <label for="identity-type">Identity Type:</label>
                     <select id="identity-type" name="identity-type" required>
@@ -83,6 +94,7 @@
                     </select>
                 </div>
 
+                <!-- Identity Number -->
                 <div class="form-group item4">
                     <label for="identity-number">Identity Number:</label>
                     <input type="text" id="identity-number" name="identity-number"
@@ -90,6 +102,7 @@
                     <p id="identity-number-error" class="error"></p>
                 </div>
 
+                <!-- Upload Identity -->
                 <div class="form-group item5">
                     <label for="identity-document">Upload Identity:</label>
 
@@ -98,11 +111,13 @@
                             <i class="fa fa-upload"></i>&nbsp; Upload your Document here
                         </button>
                         <div id="dropdown-options" class="dropdown-options hidden">
+                            <!-- Front Copy -->
                             <div class="custom-file-input">
                                 <label for="front-copy">Upload Front Copy</label>
                                 <input type="file" id="front-copy" name="front-copy" accept="image/*, .pdf">
                             </div>
 
+                            <!-- Back Copy -->
                             <div class="custom-file-input">
                                 <label for="back-copy">Upload Back Copy</label>
                                 <input type="file" id="back-copy" name="back-copy" accept="image/*, .pdf">
@@ -116,6 +131,7 @@
 
             <p id="data-error" class="error"></p>
 
+            <!-- Data submission button -->
             <div class="form-button">
                 <button type="submit">Submit</button>
             </div>
@@ -124,6 +140,7 @@
 
     <!-- <footer id="footer"></footer> -->
 
+    <!-- Data submission success message -->
     <div id="popup-message" class="popup hidden"><i class="fa fa-check-circle"></i> Data submitted successfully!</div>
 
     <script src="/assets/js/user-form.js"></script>

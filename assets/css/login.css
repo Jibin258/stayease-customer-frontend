@@ -10,6 +10,7 @@ body {
     margin: 0;
 }
 
+/* Header styles */
 header {
     height: 15vh;
     width: 100%;
@@ -20,17 +21,20 @@ header {
     padding: 0 1rem;
 }
 
+/* Header image styles */
 header .imgContainer img {
     height: 100%;
     max-height: 60px;
 }
 
+/* Main section styles */
 .main-container {
     display: flex;
     height: 85vh;
 
 }
 
+/* Large screen image styles */
 .image-container {
     width: 60%;
 }
@@ -40,6 +44,7 @@ header .imgContainer img {
     height: 100%;
 }
 
+/* Form styles */
 .form-container {
     flex: 1;
     background-color: #21222d;
@@ -57,12 +62,14 @@ header .imgContainer img {
     white-space: nowrap;
 }
 
+/* Heading styles */
 .form-container h1 {
     color: white;
     text-align: center;
     margin-bottom: 2rem;
 }
 
+/* Field styles */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -95,6 +102,7 @@ input:focus {
     margin-top: 0.5rem;
 }
 
+/* Button styles */
 button {
     background-color: #eba312;
     color: white;
@@ -111,6 +119,8 @@ button:hover {
     color: #eba312;
 }
 
+
+/* Terms and conditions styles */
 .checkbox-container {
     display: flex;
     gap: 10px;
@@ -154,6 +164,7 @@ button:hover {
     text-decoration: none;
 }
 
+/* Verification success message styles */
 .popup {
     position: fixed;
     top: 20%;
@@ -185,6 +196,7 @@ button:hover {
     display: none;
 }
 
+/* Small screen styles */
 @media (max-width: 930px) {
     .main-container {
         flex-direction: column;

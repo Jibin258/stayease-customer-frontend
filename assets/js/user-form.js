@@ -1,3 +1,4 @@
+// File Upload dropdown function
 function toggleDropdown() {
     const dropdown = document.getElementById('dropdown-options');
     dropdown.classList.toggle('hidden');
@@ -11,6 +12,7 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// Data submission success message popup function
 function showPopup() {
     const popup = document.getElementById('popup-message');
     popup.classList.remove('hidden');
@@ -22,6 +24,7 @@ function showPopup() {
     }, 3000);
 }
 
+// Form validation function
 function validateForm() {
     const fname = document.getElementById("fname").value;
     const lname = document.getElementById("lname").value;
@@ -120,30 +123,28 @@ function validateForm() {
 
     console.log([...formData])
 
-    // fetch('/api/storing-data', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: formData,
-    // })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         if (data.success) {
-    //             document.getElementById("data-error").textContent = "";
-    //             console.log('Data submitted successfully!');
-    //             showPopup();
-    //         } else {
-    //             console.error('Data submission failed:', data.message);
-    //             document.getElementById("data-error").textContent = "Data submission failed. Please try again!";
-    //         }
-    //     })
-    //     .catch(error => {
-    //         console.error('Error submitting data:', error);
-    //         document.getElementById("data-error").textContent = "Error submitting data. Please try again later!";
-    //     });
-
-    showPopup();
+    fetch('/api/storing-data', { //Form submission API here
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: formData,
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById("data-error").textContent = "";
+                console.log('Data submitted successfully!');
+                showPopup();
+            } else {
+                console.error('Data submission failed:', data.message);
+                document.getElementById("data-error").textContent = "Data submission failed. Please try again!";
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting data:', error);
+            document.getElementById("data-error").textContent = "Error submitting data. Please try again later!";
+        });
 
     return false;
 }

@@ -1,1 +1,0 @@
-# stayease-customer-frontend

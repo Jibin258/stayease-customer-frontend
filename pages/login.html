@@ -10,41 +10,51 @@
 </head>
 
 <body>
+    <!-- Header section -->
     <header>
         <div class="imgContainer">
             <img src="/assets/img/stayEase-Logo.webp" alt="Company_Logo">
         </div>
     </header>
 
+    <!-- Main section -->
     <main class="main-container">
+        <!-- Image for large screen -->
         <div class="image-container">
             <img src="/assets/img/login-Img.webp" alt="Login_Image">
         </div>
 
+        <!-- Form for login -->
         <div class="form-container">
             <form id="contact-form" onsubmit="return submitOtp()">
+                <!-- Heading -->
                 <h1>Welcome to Stayease!</h1>
                 
+                <!-- Phone feild -->
                 <div class="form-group">
                     <label for="phone">Phone:</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                     <p id="phone-error" class="error"></p>
                 </div>
 
+                <!-- OTP Button -->
                 <div class="form-group">
                     <button type="button" id="otpBtn" onclick="sendOtp()">Get OTP</button>
                 </div>
 
+                <!-- OTP feild -->
                 <div class="form-group" id="otpDisplay" hidden>
                     <label for="otp">OTP:</label>
                     <input type="text" id="otp" name="otp" placeholder="Enter your OTP here" required>
                     <p id="otp-error" class="error"></p>
                 </div>
 
+                <!-- Login Button -->
                 <div class="form-group" id="submitDisplay" hidden>
                     <button type="submit">Login</button>
                 </div>
 
+                <!-- Terms and Conditions field -->
                 <div class="checkbox-container">
                     <input type="checkbox" id="terms-checkbox" name="terms-checkbox">
                     <label for="terms-checkbox">I agree to the <a href="https://www.mystayease.com/terms-and-conditions" target="_blank" class="terms-link">terms and conditions</a></label>
@@ -53,6 +63,7 @@
         </div>
     </main>
 
+    <!-- Verification success message -->
     <div id="popup-message" class="popup hidden"><i class="fa fa-check-circle"></i> OTP verified successfully!</div>
 
     <script src="/assets/js/login.js"></script>

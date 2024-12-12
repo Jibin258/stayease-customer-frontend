@@ -10,6 +10,7 @@ body {
     margin: 0;
 }
 
+/* Header styles */
 header {
     height: 15vh;
     width: 100%;
@@ -20,11 +21,13 @@ header {
     padding: 0 1rem;
 }
 
+/* Header image styles */
 header .imgContainer img {
     height: 100%;
     max-height: 60px;
 }
 
+/* Form styles */
 .form-container {
     background-color: #21222d;
     padding: 30px;
@@ -43,6 +46,7 @@ label {
     margin-bottom: 0.5rem;
 }
 
+/* Field styles */
 .fieldset {
     display: flex;
     justify-content: space-between;
@@ -143,6 +147,11 @@ select:focus,
     margin-top: 0.5rem;
 }
 
+#data-error {
+    text-align: center;
+}
+
+/* Button styles */
 button[type="submit"] {
     background-color: #eba312;
     color: white;
@@ -168,6 +177,7 @@ button[type="submit"]:hover {
     color: #777;
 } */
 
+/* Data submission success message styles */
 .popup {
     position: fixed;
     top: 20%;
@@ -199,7 +209,7 @@ button[type="submit"]:hover {
     display: none;
 }
 
-
+/* Small screen styles */
 @media (max-width: 930px) {
     .form-container {
         width: 100%;
